@@ -4,6 +4,8 @@ import config from "./config";
 import loaders from "./loaders";
 
 import apiRoutes from "./api-routes";
+import path from "path";
+import ApiError from "./errors/ApiError";
 
 config();
 loaders();
@@ -18,6 +20,9 @@ const PORT = process.env.APP_PORT;
 app.listen(PORT, () => {
   console.log(`Sunucu ayağa kalktı. (port=${PORT})`);
   app.use("/api", apiRoutes);
+
+  app.use(express.static(path.join("src", "client", "dist")));
+  app.use(express.static("public"));
 
   //404 handler
   app.use((req, res, next) => {
