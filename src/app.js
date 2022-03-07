@@ -1,9 +1,9 @@
 import express from "express";
 import helmet from "helmet";
-import config from "./config/index.js";
-import loaders from "./loaders/index.js";
+import config from "./config";
+import loaders from "./loaders";
 
-import apiRoutes from "./api-routes/index.js";
+import apiRoutes from "./api-routes";
 
 config();
 loaders();

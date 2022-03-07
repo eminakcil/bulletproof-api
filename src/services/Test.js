@@ -1,4 +1,4 @@
-import Test from "../models/Test.js";
+import Test from "../models/Test";
 
 const insert = (data) => {
   const test = Test(data);

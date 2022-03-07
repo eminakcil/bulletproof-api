@@ -1,8 +1,8 @@
-import validate from "../middlewares/validate.js";
-import schemas from "../validations/Test.js";
+import validate from "../middlewares/validate";
+import schemas from "../validations/Test";
 
 import express from "express";
-import { index, create } from "../controllers/Test.js";
+import { index, create } from "../controllers/Test";
 
 const router = express.Router();
 

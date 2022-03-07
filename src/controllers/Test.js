@@ -1,4 +1,4 @@
-import { insert, list } from "../services/Test.js";
+import { insert, list } from "../services/Test";
 import httpStatus from "http-status";
 
 const index = (req, res) => {
