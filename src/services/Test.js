@@ -1,12 +1,8 @@
 import Test from "../models/Test";
+import BaseService from "./BaseService";
 
-const insert = (data) => {
-  const test = Test(data);
-  return test.save();
-};
-
-const list = () => {
-  return Test.find({});
-};
-
-export { insert, list };
+export default class TestService extends BaseService {
+  constructor() {
+    super(Test);
+  }
+}
